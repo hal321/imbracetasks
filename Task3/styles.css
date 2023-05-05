@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'sans-serif';
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  z-index: 999;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url("data: image/jpeg;base64,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");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.service i {
+  font-size: 48px;
+  margin-right: 20px;
+}
+
+#team {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 50px;
+}
+
+.profile-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 50%;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+}
